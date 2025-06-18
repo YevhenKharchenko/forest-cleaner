@@ -1,7 +1,7 @@
 .footer {
-  background: #729dcb;
-  padding-top: 53px;
-  padding-bottom: 49px;
+  background: #327447;
+  padding-top: 34px;
+  padding-bottom: 34px;
 
   @include media(desktop) {
     padding-top: 46px;
@@ -11,7 +11,7 @@
 
 .footer-nav {
   text-align: center;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 
   @include media(desktop) {
     margin-bottom: 50px;
@@ -34,8 +34,9 @@
 .footer-link {
   font-family: 'Fredoka', sans-serif;
   font-weight: 700;
-  font-size: 20px;
-  color: #002033;
+  font-size: 22px;
+  line-height: 1.5;
+  color: #cbed37;
   transition: color 0.3s ease-in-out;
 
   &:hover,
@@ -48,7 +49,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 1.5;
-  color: #002033;
+  color: #cbed37;
 
   @include media(desktop) {
     text-align: center;
