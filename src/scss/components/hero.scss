@@ -1,0 +1,29 @@
+.hero-section {
+}
+
+.hero-bg-wrapper {
+  padding-top: 96px;
+  padding-bottom: 504px;
+  background-image: url(../img/hero/hero-bg-mob.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  max-width: 375px;
+  margin: 0 auto;
+  position: relative;
+
+  @include media(desktop) {
+    background-image: url(../img/hero/hero-bg-desk.jpg);
+    padding-top: 226px;
+    padding-bottom: 281px;
+    max-width: 1440px;
+  }
+}
+
+.hero-title-img {
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media(desktop) {
+    margin-right: 0;
+  }
+}
