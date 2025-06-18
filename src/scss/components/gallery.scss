@@ -16,7 +16,6 @@
 
   @include media(desktop) {
     max-width: 1440px;
-    overflow: visible;
   }
 }
 
@@ -27,6 +26,14 @@
   @include media(desktop) {
     padding-left: 80px;
     padding-right: 80px;
+  }
+}
+
+.gallery-title {
+  padding-left: 20px;
+
+  @include media(desktop) {
+    padding-left: 0;
   }
 }
 

@@ -1,6 +1,9 @@
 import Swiper from 'swiper';
 import 'swiper/css/bundle';
 
+const galleryLeftArrow = document.getElementById('galleryLeftArrow');
+const galleryRightArrow = document.getElementById('galleryRightArrow');
+
 let gallerySwiper;
 
 gallerySwiper = new Swiper('.gallery-swiper-container', {
@@ -9,7 +12,7 @@ gallerySwiper = new Swiper('.gallery-swiper-container', {
   grabCursor: true,
   slidesPerView: 1,
   initialSlide: 0,
-  spaceBetween: 20,
+  spaceBetween: 30,
   grabCursor: true,
   allowTouchMove: true,
   speed: 500,
@@ -20,13 +23,30 @@ gallerySwiper = new Swiper('.gallery-swiper-container', {
   breakpoints: {
     1440: {
       slidesPerView: 4,
-      grabCursor: false,
-      allowTouchMove: false,
+      spaceBetween: 20,
     },
   },
   on: {
     init: () => {
       document.querySelector('.gallery-swiper-container').classList.add('show');
     },
+    slideChange: function () {
+      updateGalleryArrows(this);
+    },
   },
+});
+
+updateGalleryArrows(gallerySwiper);
+
+function updateGalleryArrows(swiper) {
+  galleryLeftArrow.disabled = swiper.isBeginning;
+  galleryRightArrow.disabled = swiper.isEnd;
+}
+
+galleryLeftArrow.addEventListener('click', () => {
+  gallerySwiper.slidePrev();
+});
+
+galleryRightArrow.addEventListener('click', () => {
+  gallerySwiper.slideNext();
 });

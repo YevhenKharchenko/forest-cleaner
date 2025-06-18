@@ -47,12 +47,11 @@ html {
   font-weight: 700;
   font-size: 38px;
   line-height: 1.5;
-  text-align: center;
+  text-align: left;
   color: #f8a204;
   margin-bottom: 28px;
 
   @include media(desktop) {
-    text-align: left;
     margin-bottom: 36px;
   }
 }
